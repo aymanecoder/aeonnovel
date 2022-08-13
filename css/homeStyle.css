@@ -1,0 +1,616 @@
+:root{
+    --primary-color: #e50914;
+    --dark-color: #141414;
+    --light-color: #f4f4f4;
+}
+
+/* @font-face {
+    font-family: 'Veitnam';
+    src: url("/public/assets/webfonts/BeVietnamPro-Bold.ttf") format("ttf"),
+} */
+
+@font-face {
+    font-family: veitnam;
+    src: url('../fonts/BeVietnamPro-Bold.ttf');
+}
+
+@font-face {
+    font-family: poppins;
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: dancing;
+    src: url('../fonts/DancingScript.ttf');
+}
+
+.quote-trial{
+    width: 100%;
+    max-width: 650px;
+    align-self: flex-end;
+    margin-top: 10px !important;
+}
+
+
+.quote-div{
+    transform: translateX(80%)!important;
+}
+
+.all-get{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.typed-cursor{
+    font-size: 30px !important;
+    font-weight: 600 !important;
+    line-height: 1.25em !important;
+}
+
+.btn-signIn{
+    letter-spacing: 0.2pt !important;
+    border-radius: 5px !important;
+    display: inline-block !important; 
+    line-height: 1 !important;
+    font-size: 12px !important;
+    padding: 15px 28px !important;
+    font-weight: 600 !important;
+    box-shadow: none !important;
+}
+
+.btn-signIn:not(:hover){
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+}
+
+.btn-signIn:hover{
+    background: #ffffff !important;
+    color: #000000 !important;
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+}
+
+.blink {
+  animation: blink 0.5s infinite;
+}
+@keyframes blink{
+  to { opacity: .0; }
+}
+.flex{
+    display: flex;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: poppins;
+    background: #000000;
+    color: #999999;
+}
+
+ul{
+    list-style: none;
+}
+
+h1,h2,h3,h4{
+    color: #ffffff;
+}
+
+h3{
+    font-weight: lighter;
+}
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+p{
+    margin: 0.5rem 0;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+img{
+    width: 100%;
+}
+
+
+.get-started #mail{
+    border: none;
+}
+
+.showcase{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    /* background: url('../images/compressed-rect3138-min.jpg') no-repeat center center/cover; */
+    background: 
+     linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),/* the gradient on top, adjust color and opacity to your taste */
+      url('../images/compressed-rect3138-min.jpg') no-repeat center center/cover;
+}
+
+.showcase::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+
+.showcase-top{
+    position: relative;
+    z-index: 2;
+    height: 90px;
+}
+
+.showcase-top img{
+    width: 170px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(40% , -50%);
+}
+
+.showcase-top a{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-60% , -50%);
+    background: #37b6ffff;
+
+}
+
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 2.5s steps(40, end),
+      blink-caret .75s step-end infinite,
+      removing 2s step-end;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes removing {
+    from { width: 100% }
+    to { width: 0% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
+.showcase-content{
+    width: auto;
+    position: relative;
+    margin: 0px 0px 0px 10%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    align-items: flex-start;
+    margin-top: 6rem;
+}
+
+.showcase-content h1{
+    font-family: veitnam;
+    font-size: 50px;
+    margin: 0px;
+    max-width: 800px;
+    color: #FFF;
+    font-weight: 600;
+    line-height: 1.5em;
+}
+
+.showcase-content h3{
+    color: white;
+    font-family: veitnam;
+    font-size: 25px;
+    margin: 16px 0;
+}
+
+.get-started {
+    /* This bit sets up the horizontal layout */
+    display:flex;
+    flex-direction:row;
+    /* I've used padding so you can see the edges of the elements. */
+    padding:2px;
+    width: auto;
+}
+  
+input {
+    /* Tell the input to use all the available space */
+    font-family: poppins;
+    flex-grow: 2;
+    border: none;
+    width: 250px;
+    height: 3rem;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+    border-radius: 5px 0px 0px 5px;
+}
+  
+input:focus {
+    /* removing the input focus blue box. Put this on the form if you like. */
+    outline: none;
+}
+
+button {
+    /* Just a little styling to make it pretty */
+    font-family: poppins;
+    border:1px solid blue;
+    background:blue;
+    color:white;
+    letter-spacing: 0.2pt !important;
+    display: inline-block !important; 
+}
+
+button:not(:hover){
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+}
+
+button:hover{
+    background: #FFFFFF	 !important;
+    color: #000000 !important;
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+}
+
+.showcase-content p{
+    font-family: poppins;
+    font-size: 19.2px;
+    font-weight: 300;
+
+}
+
+.big-title{
+    text-transform:capitalize !important ;
+}
+
+.header-sub-title{
+    margin: 0 !important;
+    color: #FFF !important;
+    font-size: 50px !important;
+    font-weight: 600 !important;
+    line-height: 1.5em !important;
+    text-transform: capitalize !important;
+}
+
+.ready{
+    padding: 0px !important;
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
+}
+
+/* .showcase-content input{
+    position: absolute;
+    left: 0;
+    bottom: -8vh;
+    width: 454px;
+    height: 3rem;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+    border-radius: 5px;
+} */
+
+.btn{
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-right: 0.5rem;
+    outline: none;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.45);
+}
+
+.btn:hover{
+    opacity: 1;
+}
+
+.btn-rounded{
+    border-radius: 5px;
+}
+
+/* @media screen and (max-width: 1440px) and (min-width: 768px) {
+    .showcase-content .btn-lg{
+        left: 38.3vh !important;
+    }
+}
+
+@media screen and (max-width: 1917px) {
+    .showcase-content .btn-lg{
+        left: 35.5vh !important;
+    }
+} */
+
+.showcase-content .btn-lg{
+    font-size: 20px;
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+    border-radius: 0px 5px 5px 0px;
+    background: #37b6ffff;
+    box-shadow: none;
+}
+
+.card-0 , 
+.card-1,
+.card-2,
+.card-3{
+    border-top: 8px rgb(69, 69, 69) solid;
+    padding: 50px;
+}
+
+.card-0{
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 40% 50%;
+    text-align: left;
+    align-items: center;
+    padding: 25px 45px 50px;
+}
+
+.desc-0{
+    padding-left: 100px;
+}
+
+.card-1{
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 50% 40%;
+    text-align: left;
+    align-items: center;
+    padding: 25px 45px 50px;
+}
+
+.desc-1{
+    padding-left: 80px;
+}
+
+.style-cards h1{
+    font-size: 3rem;
+    padding: 1rem;
+    padding-left: 0;
+}
+
+.style-cards h3{
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+
+.card-1 video{
+    position: relative;
+    width: 100%;
+    height: 54%;
+    grid-column: 2/2;
+    grid-row: 1/2;
+    z-index: -1;
+}
+
+.card-1 img{
+    grid-column: 2/2;
+    grid-row: 1/2;
+}
+
+.card-2{
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 40% 50%;
+    text-align: left;
+    align-items: center;
+    padding: 25px 45px 50px;
+}
+
+.desc-2{
+    padding-left: 100px;
+}
+
+.card-3{
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 50% 40%;
+    text-align: left;
+    align-items: center;
+    padding: 25px 45px 50px;
+}
+
+.desc-3{
+    padding-left: 80px;
+    padding-right: 20px;
+}
+
+.card-3 img{
+    width: 110%;
+    grid-column: 2/2;
+    grid-row: 1/2;
+}
+
+.card-3 video{
+    position: relative;
+    top: -87px;
+    left: 125px;
+    width: 65%;
+    height: 78%;
+    grid-column: 2/2;
+    grid-row: 1/2;
+    z-index: -1;
+}
+
+.faq{
+    text-align: center;
+}
+
+.faq h1{
+    padding-bottom: 40px;
+    font-size: 3rem;
+}
+
+.questions{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    align-items: center;
+}
+
+.questions li{
+    padding: 20px 30px;
+    margin: 5px;
+    font-size: 1.6rem;
+    background-color: #303030;
+    color: white;
+    text-align: left;
+    width: 50%;
+}
+
+.faq p{
+    padding-top: 60px;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.input{
+    display: inline-grid;
+    align-items: center;
+    grid-template-columns: 50% 40%;
+}
+
+.input input{
+    width: 600px;
+    height: 3rem;
+}
+
+.input button{
+    height: 3.25rem;
+    width: 320px;
+    left: 20px;
+    text-align: center;
+    background-color: var(--primary-color);
+    font-size: 1.5rem;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 2px;
+    color: white;
+}
+
+.footer{
+    max-width: 70%;
+    margin: 1rem auto;
+    overflow: auto;
+}
+
+.footer ,
+.footer a{
+    color: #999999;
+    font-size: 0.9rem;
+}
+
+.footer p{
+    margin-bottom: 1.5rem;
+}
+
+.footer .footer-cols{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-gap: 2rem;
+}
+
+.footer li{
+    line-height: 2.4;
+}
+
+@media only screen and (max-width: 1200px){
+    .showcase-content h1{
+        font-size: 45px;
+    }
+    .header-sub-title{
+        font-size: 45px !important;
+    }
+    .showcase-content p {
+        font-size: 18px !important;
+    }
+    img.quote-trial {
+        margin: auto;
+        /* display:none; */
+    }
+    .quote-div {
+        transform: translateX(0%)!important;
+    }
+}
+@media only screen and (max-width: 600px){
+    .get-started{
+        /* gap:5px; */
+    }
+    .showcase-content .btn-lg{
+        font-size: 16px;
+    }
+    .showcase-top{
+        display:flex;
+        width:100%;
+    }
+    .showcase-top img{
+        left:-10%;
+    }
+    .btn-signIn{
+        right: -10% !important;
+    }
+    .showcase-content h1{
+        font-size: 35px;
+    }
+    .header-sub-title{
+        font-size: 35px !important;
+    }
+    .showcase-content p {
+        font-size: 16px !important;
+    }
+    img.quote-trial {
+        margin: auto;
+    }
+    .showcase-content{
+        margin-top: 4rem;
+        margin-left: 5%;
+    }
+    .quote-div {
+        transform: translateX(0%)!important;
+    }
+}
+@media only screen and (max-width: 425px){
+    .showcase-content h1{
+        font-size: 25px;
+    }
+    .header-sub-title{
+        font-size: 25px !important;
+    }
+    .showcase-content p {
+        font-size: 14px !important;
+    }
+    img.quote-trial {
+        margin: auto;
+    }
+    .quote-div {
+        transform: translateX(0%)!important;
+    }
+}
